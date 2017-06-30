@@ -1,0 +1,8 @@
+{
+  "name": "gueriNews2",
+  "app_id": "33da7f92",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}

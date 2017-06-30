@@ -1,0 +1,27 @@
+<ion-view view-title="News">
+  <ion-content>
+    <ion-list>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Search" ng-model="searchQuery.q" ng-change="searchDo()">
+        </label>
+      </div>
+      <ion-item ng-repeat="article in news" href="#/app/news/{{article.id}}">
+        <div class="list card">
+                    <div class="item item-body">
+            <h2>{{article.post.title}}</h2>
+            <p>{{article.post.published | date}}</p>
+            <img class="full-image" src="{{article.post.image}}">
+            <p>
+              {{article.post.description}}
+            </p>
+            <p>
+              <a href="#" class="subdued">1 Like</a>
+              <a href="#" class="subdued">5 Comments</a>
+            </p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
